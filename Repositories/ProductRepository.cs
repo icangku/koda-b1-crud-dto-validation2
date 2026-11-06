@@ -184,7 +184,7 @@ public sealed class ProductRepository : IProductRepository
   }
 
   private static CustomerProductResponse ReadProductDto(SqlDataReader reader)
-{
+  {
     return new CustomerProductResponse
     {
         CustomerName = reader["CustomerName"].ToString(),
@@ -194,5 +194,5 @@ public sealed class ProductRepository : IProductRepository
         Stock = Convert.ToInt32(reader["Stock"]),
         Category = reader["Category"].ToString()
     };
-}
+  }
 }
